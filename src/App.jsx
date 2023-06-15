@@ -20,6 +20,13 @@ const content = [
     "Next.js (Fullstack framework)",
     "React Native (build native mobile apps with React)",
   ],
+
+  [
+    "Vanilla JavaScript requires imperative programming",
+    "Imperative Programming: You define all the steps needed to achieve a result",
+    "React on the other hand embraces declarative programming",
+    "With React, you define the goal and React figures out how to get there",
+  ],
 ];
 
 
@@ -56,16 +63,21 @@ function App() {
               onClick={() => setActiveContent(2)}>
               Related Resources
             </button>
+
+            <button
+              className={activeContent === 3 ? "active" : " "}
+              onClick={() => setActiveContent(3)}>
+              React.js Vs Vanilla js
+            </button>
           </menu>
 
-          <div id='tab-content'>
+          <div id="tab-content">
             <ul>
               {content[activeContent].map((item) => (
-                <li key={item}>{ item}</li>
-               ))}
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </div>
-
         </div>
       </div>
     </>
